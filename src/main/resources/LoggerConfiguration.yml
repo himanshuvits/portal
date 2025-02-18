@@ -1,0 +1,19 @@
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.travel.portal: INFO
+    org.hibernate: ERROR
+
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+  file:
+    name: logs/application.log
+
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 30
+      file-name-pattern: logs/archived/application.%d{yyyy-MM-dd}.%i.log.gz
